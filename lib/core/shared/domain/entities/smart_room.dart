@@ -73,9 +73,9 @@ final _room = SmartRoom(
 );
 
 const _imagesUrls = [
-  'https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
-  'https://images.unsplash.com/photo-1564540583246-934409427776?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1706&q=80',
-  'https://images.unsplash.com/photo-1616486886892-ff366aa67ba4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
-  'https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
-  'https://m.media-amazon.com/images/I/715hLONUQOL._AC_SL1500_.jpg'
+  'assets/images/0.jpeg',
+  'assets/images/1.jpeg',
+  'assets/images/2.jpeg',
+  'assets/images/3.jpeg',
+  'assets/images/4.jpeg',
 ];
