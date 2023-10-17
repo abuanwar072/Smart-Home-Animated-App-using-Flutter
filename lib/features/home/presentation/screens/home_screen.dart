@@ -3,6 +3,7 @@ import 'package:smart_home_animation/core/core.dart';
 import 'package:ui_common/ui_common.dart';
 
 import '../widgets/lighted_background.dart';
+import '../widgets/page_indicators.dart';
 import '../widgets/smart_room_page_view.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -57,9 +58,20 @@ class _HomeScreenState extends State<HomeScreen> {
                       roomSelectorNotifier: roomSelectorNotifier,
                       controller: controller,
                     ),
+                    Positioned.fill(
+                      top: null,
+                      child: Column(
+                        children: [
+                          PageIndicators(
+                            roomSelectorNotifier: roomSelectorNotifier,
+                            pageNotifier: pageNotifier,
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),
