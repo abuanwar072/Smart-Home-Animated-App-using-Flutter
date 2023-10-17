@@ -33,13 +33,15 @@ class RoomCard extends StatelessWidget {
       curve: Curves.fastOutSlowIn,
       tween: Tween(begin: 0, end: expand ? 1 : 0),
       builder: (_, value, __) => Stack(
+        fit: StackFit.expand,
         children: [
           // -----------------------------------------------
           // Background information card
           // -----------------------------------------------
           Transform.scale(
             scale: lerpDouble(.85, 1.2, value),
-            // scale: 1,
+            // scale: 0.85,
+
             child: Padding(
               padding: const EdgeInsets.only(bottom: 180),
               child: BackgroundRoomCard(room: room, translation: value),
@@ -49,10 +51,9 @@ class RoomCard extends StatelessWidget {
           // Room image card with parallax effect
           // -----------------------------------------------
           Padding(
-            padding: EdgeInsets.only(bottom: 200),
+            padding: const EdgeInsets.only(bottom: 200),
             child: Transform(
-              transform: Matrix4.translationValues(0, -80.h * value, 0),
-              // transform: Matrix4.translationValues(0, -10, 0),
+              transform: Matrix4.translationValues(0, -90 * value, 0),
               child: GestureDetector(
                 onTap: onTap,
                 onVerticalDragUpdate: (details) {
@@ -79,6 +80,7 @@ class RoomCard extends StatelessWidget {
                   },
                   child: Stack(
                     fit: StackFit.expand,
+                    clipBehavior: Clip.none,
                     children: [
                       ParallaxImageCard(
                         imageUrl: room.imageUrl,
