@@ -61,12 +61,12 @@ class RoomDetailsPageView extends StatelessWidget {
             Expanded(
               child: DefaultTextStyle(
                 style: GoogleFonts.montserrat(
-                  fontSize: 14.sp,
+                  fontSize: 14,
                   fontWeight: FontWeight.w700,
                 ),
                 child: ListView(
                   physics: const BouncingScrollPhysics(),
-                  padding: 20.edgeInsetsA.copyWith(top: 12.h),
+                  padding: const EdgeInsets.fromLTRB(20, 12, 20, 20),
                   children: [
                     SlideTransition(
                       position: Tween(
@@ -86,7 +86,7 @@ class RoomDetailsPageView extends StatelessWidget {
                         ),
                       ),
                     ),
-                    height20,
+                    const SizedBox(height: 20),
                     SlideTransition(
                       position: Tween(
                         begin: const Offset(0, 2),
