@@ -3,6 +3,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:ui_common/ui_common.dart';
 
 import '../../../core/shared/domain/entities/smart_room.dart';
+import 'air_conditiioner_controls_card.dart';
+import 'light_and_time_switcher.dart';
+import 'light_intensity_slide_card.dart';
+import 'music_switchers.dart';
 
 class RoomDetailsPageView extends StatelessWidget {
   const RoomDetailsPageView({
@@ -47,7 +51,7 @@ class RoomDetailsPageView extends StatelessWidget {
                   onPressed: () => Navigator.pop(context),
                   style: TextButton.styleFrom(
                     alignment: Alignment.centerLeft,
-                    padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
+                    padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
                   ),
                   icon: const Icon(Icons.keyboard_arrow_left),
                   label: const Text('BACK'),
@@ -73,11 +77,11 @@ class RoomDetailsPageView extends StatelessWidget {
                         opacity: _interval1,
                         child: Row(
                           children: [
-                            // Expanded(
-                            //   child: LightsAndTimerSwitchers(room: room),
-                            // ),
+                            Expanded(
+                              child: LightsAndTimerSwitchers(room: room),
+                            ),
                             width20,
-                            // Expanded(child: MusicSwitchers(room: room)),
+                            Expanded(child: MusicSwitchers(room: room)),
                           ],
                         ),
                       ),
@@ -90,10 +94,10 @@ class RoomDetailsPageView extends StatelessWidget {
                       ).animate(_interval2),
                       child: FadeTransition(
                         opacity: _interval2,
-                        // child: LightIntensitySliderCard(room: room),
+                        child: LightIntensitySliderCard(room: room),
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     SlideTransition(
                       position: Tween(
                         begin: const Offset(0, 2),
@@ -101,7 +105,7 @@ class RoomDetailsPageView extends StatelessWidget {
                       ).animate(_interval1),
                       child: FadeTransition(
                         opacity: _interval3,
-                        // child: AirConditionerControlsCard(room: room),
+                        child: AirConditionerControlsCard(room: room),
                       ),
                     ),
                   ],
