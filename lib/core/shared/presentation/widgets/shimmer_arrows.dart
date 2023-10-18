@@ -16,7 +16,7 @@ class _ShimmerArrowsState extends State<ShimmerArrows>
   @override
   void initState() {
     _controller = AnimationController.unbounded(vsync: this)
-      ..repeat(min: -0.5, max: 1.5, period: const Duration(milliseconds: 1000));
+      ..repeat(min: -0.5, max: 1.5, period: const Duration(seconds: 1));
     super.initState();
   }
 
@@ -38,10 +38,12 @@ class _ShimmerArrowsState extends State<ShimmerArrows>
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: _controller,
-      builder: (_, child) => ShaderMask(
-        shaderCallback: (bounds) => gradient.createShader(bounds),
-        child: child,
-      ),
+      builder: (_, child) {
+        return ShaderMask(
+          shaderCallback: (bounds) => gradient.createShader(bounds),
+          child: child,
+        );
+      },
       child: const Column(
         children: [
           Align(heightFactor: .4, child: Icon(SHIcons.arrowUp)),
