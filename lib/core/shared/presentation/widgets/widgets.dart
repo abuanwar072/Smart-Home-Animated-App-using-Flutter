@@ -4,3 +4,4 @@ export 'blue_dot_light.dart';
 export 'sh_divider.dart';
 export 'sh_card.dart';
 export 'sh_switcher.dart';
+export 'animated_upward_arrows.dart';
