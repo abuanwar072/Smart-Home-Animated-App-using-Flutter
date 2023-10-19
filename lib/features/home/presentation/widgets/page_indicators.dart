@@ -6,32 +6,14 @@ import '../../../../core/theme/sh_colors.dart';
 class PageIndicators extends StatelessWidget {
   const PageIndicators({
     super.key,
-    required this.roomSelectorNotifier,
-    required this.pageNotifier,
   });
-
-  final ValueNotifier<int> roomSelectorNotifier;
-  final ValueNotifier<double> pageNotifier;
 
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder<int>(
-      valueListenable: roomSelectorNotifier,
-      builder: (_, value, child) => AnimatedOpacity(
-        opacity: value != -1 ? 0 : 1,
-        duration: value != -1
-            ? const Duration(milliseconds: 1)
-            : const Duration(milliseconds: 400),
-        child: child,
-      ),
-      child: ValueListenableBuilder<double>(
-        valueListenable: pageNotifier,
-        builder: (_, value, __) => Center(
-          child: PageViewIndicators(
-            length: SmartRoom.fakeValues.length,
-            pageIndex: value,
-          ),
-        ),
+    return Center(
+      child: PageViewIndicators(
+        length: SmartRoom.fakeValues.length,
+        pageIndex: 2,
       ),
     );
   }
