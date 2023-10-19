@@ -54,11 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   fit: StackFit.expand,
                   clipBehavior: Clip.none,
                   children: [
-                    SmartRoomsPageView(
-                      pageNotifier: pageNotifier,
-                      roomSelectorNotifier: roomSelectorNotifier,
-                      controller: controller,
-                    ),
+                    SmartRoomsPageView(controller: controller),
                     Positioned.fill(
                       top: null,
                       child: Column(
