@@ -1,16 +1,11 @@
-# smart_home_animation
+# Flutter Smart Home Animated App
 
-A new Flutter project.
+I've created a step-by-step video tutorial to guide you through the process of building a Animated Smart Home App using Flutter. **[Watch it on YouTube](https://youtu.be/_uOgXpEHNbc)**
 
-## Getting Started
+Welcome to the 'Animated Smart Home App'. In this video, we'll begin by showing you how to create a parallax effect in Flutter. We'll be focusing on using the implicit widget for most animations. Plus, you'll see how we use explicit animation widgets and custom transitions when moving from one page to another. Enjoy!
 
-This project is a starting point for a Flutter application.
+### Responsive Admin Panel or Dashboard Final UI Preview
 
-A few resources to get you started if this is your first Flutter project:
+![Preview](/gif.gif)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![App UI](/ui.png)
