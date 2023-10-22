@@ -11,7 +11,7 @@ class SmartHomeApp extends StatelessWidget {
     return ScreenUtilInit(
       builder: (context, child) {
         return MaterialApp(
-          // debugShowCheckedModeBanner: false,
+          debugShowCheckedModeBanner: false,
           title: 'TheFlutterWay Smart Home Animated App',
           theme: SHTheme.dark,
           home: const HomeScreen(),
