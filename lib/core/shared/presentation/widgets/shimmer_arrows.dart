@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import '../../../theme/sh_icons.dart';
 
 class ShimmerArrows extends StatefulWidget {
-  const ShimmerArrows({super.key});
+  const ShimmerArrows({super.key, required this.isExpand});
+  final bool isExpand;
+
 
   @override
   State<ShimmerArrows> createState() => _ShimmerArrowsState();
@@ -36,20 +38,23 @@ class _ShimmerArrowsState extends State<ShimmerArrows>
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: _controller,
-      builder: (_, child) {
-        return ShaderMask(
-          shaderCallback: (bounds) => gradient.createShader(bounds),
-          child: child,
-        );
-      },
-      child: const Column(
-        children: [
-          Align(heightFactor: .4, child: Icon(SHIcons.arrowUp)),
-          Align(heightFactor: .4, child: Icon(SHIcons.arrowUp)),
-          Align(heightFactor: .4, child: Icon(SHIcons.arrowUp)),
-        ],
+    return RotatedBox(
+      quarterTurns: widget.isExpand ? 2 : 4,
+      child: AnimatedBuilder(
+        animation: _controller,
+        builder: (_, child) {
+          return ShaderMask(
+            shaderCallback: (bounds) => gradient.createShader(bounds),
+            child: child,
+          );
+        },
+        child: const Column(
+          children: [
+            Align(heightFactor: .4, child: Icon(SHIcons.arrowUp)),
+            Align(heightFactor: .4, child: Icon(SHIcons.arrowUp)),
+            Align(heightFactor: .4, child: Icon(SHIcons.arrowUp)),
+          ],
+        ),
       ),
     );
   }

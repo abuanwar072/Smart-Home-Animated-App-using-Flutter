@@ -88,7 +88,7 @@ class RoomCard extends StatelessWidget {
                       ),
                       VerticalRoomTitle(room: room),
                       const CameraIconButton(),
-                      const AnimatedUpwardArrows()
+                      AnimatedUpwardArrows(isExpand: expand)
                     ],
                   ),
                 ),
@@ -104,7 +104,10 @@ class RoomCard extends StatelessWidget {
 class AnimatedUpwardArrows extends StatelessWidget {
   const AnimatedUpwardArrows({
     super.key,
+    required this.isExpand
   });
+  final bool isExpand;
+
 
   @override
   Widget build(BuildContext context) {
@@ -113,7 +116,7 @@ class AnimatedUpwardArrows extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          const ShimmerArrows(),
+          ShimmerArrows(isExpand: isExpand),
           const SizedBox(height: 24),
           Container(
             margin: const EdgeInsets.only(bottom: 12),
