@@ -75,10 +75,10 @@ class RoomDetailItems extends StatelessWidget {
                   offset: Offset(outDx, outDy),
                   child: const CameraIconButton(),
                 ),
-                Transform.translate(
-                  offset: Offset(0, outDy),
-                  child: const AnimatedUpwardArrows(),
-                ),
+                // Transform.translate(
+                //   offset: Offset(0, outDy),
+                //   child: const AnimatedUpwardArrows(),
+                // ),
               ],
             ),
           ),
